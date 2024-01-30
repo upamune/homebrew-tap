@@ -5,20 +5,20 @@
 class Gyz < Formula
   desc "gyz is a CLI tool for uploading images to Gyazo"
   homepage "https://github.com/upamune/gyz"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/upamune/gyz/releases/download/v0.4.0/gyz_Darwin_arm64.tar.gz"
-      sha256 "617247d7ce79718d33edb553af19f70d2cd4f9356dcab0d47f5bae84956c0219"
+    if Hardware::CPU.intel?
+      url "https://github.com/upamune/gyz/releases/download/v0.5.0/gyz_Darwin_x86_64.tar.gz"
+      sha256 "3cfbead69cdc068d18d8b2a13c9a19ae8d7759da64ad17e0b92e85030b4ca8ac"
 
       def install
         bin.install "gyz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/upamune/gyz/releases/download/v0.4.0/gyz_Darwin_x86_64.tar.gz"
-      sha256 "cb8d0bb4b406e756c5fc3e7866613f4467692423f942075023e261d8d03e46b2"
+    if Hardware::CPU.arm?
+      url "https://github.com/upamune/gyz/releases/download/v0.5.0/gyz_Darwin_arm64.tar.gz"
+      sha256 "e836af9524af49ffb1aee1294a64df4405538924db0b81cb606d6fbd51c99965"
 
       def install
         bin.install "gyz"
@@ -27,25 +27,25 @@ class Gyz < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/gyz/releases/download/v0.4.0/gyz_Linux_arm64.tar.gz"
-      sha256 "a9b1c710d2bc90d44c9fe02964c21f1630afa36c3576f87bb0f87b349dfb3026"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/upamune/gyz/releases/download/v0.5.0/gyz_Linux_armv6.tar.gz"
+      sha256 "c31c4155328e40da8b4b88dca72cd21803182bd2aedca37cf4e829dcdb2035b5"
 
       def install
         bin.install "gyz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/gyz/releases/download/v0.4.0/gyz_Linux_x86_64.tar.gz"
-      sha256 "aebabe49bc551d5c4bd45737c05d01a4c547739f31d41b1ef44b56332a0ba032"
+      url "https://github.com/upamune/gyz/releases/download/v0.5.0/gyz_Linux_x86_64.tar.gz"
+      sha256 "7a6f494d6cc89ef9f8096194677045325b557f5f0dc6449d206249153676ac2b"
 
       def install
         bin.install "gyz"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/gyz/releases/download/v0.4.0/gyz_Linux_armv6.tar.gz"
-      sha256 "d20f41d8873aaa39139a87be4fe3f60f95f5f5b12ce52316a4d391dff3437e9e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/upamune/gyz/releases/download/v0.5.0/gyz_Linux_arm64.tar.gz"
+      sha256 "01091ee549e05e14b5ded345b1639bdf381ef2b1348365506ee2b3bace568d84"
 
       def install
         bin.install "gyz"
