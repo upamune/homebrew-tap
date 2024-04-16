@@ -5,20 +5,20 @@
 class MysqlExplainAnalyzer < Formula
   desc "mea is a CLI tool for analyzing MySQL explain"
   homepage "https://github.com/upamune/mea"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.1.0/mysql-explain-analyzer_Darwin_x86_64.tar.gz"
-      sha256 "e183224c154a921650d796e6db92c0acc03928bd3a37e07bf640e8b0250ba0c4"
+      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.2.0/mysql-explain-analyzer_Darwin_x86_64.tar.gz"
+      sha256 "b9b61c2fcacdd1e697da07eb8cc77709c66362a5b064ff6132d4cd7a6d8e3999"
 
       def install
         bin.install "mea"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.1.0/mysql-explain-analyzer_Darwin_arm64.tar.gz"
-      sha256 "c018f0df6c1a27452e42cb92313201df8c2a329104976af1e657703c062348eb"
+      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.2.0/mysql-explain-analyzer_Darwin_arm64.tar.gz"
+      sha256 "1bf4d93c012d2d1dfc054a3a367eca5903c2cfae1c0e3e7237e1019f04efe36b"
 
       def install
         bin.install "mea"
@@ -28,24 +28,24 @@ class MysqlExplainAnalyzer < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.1.0/mysql-explain-analyzer_Linux_x86_64.tar.gz"
-      sha256 "cc923182bcb4790118d88e8c3f5e4a4d0b91740af1084d22180eed997f8859ca"
+      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.2.0/mysql-explain-analyzer_Linux_x86_64.tar.gz"
+      sha256 "1b7eaa552c680ee30d2483f2a5c63bc57c32a9898ebffbaa09ffc6840257cc1b"
 
       def install
         bin.install "mea"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.1.0/mysql-explain-analyzer_Linux_armv6.tar.gz"
-      sha256 "56d8a454767ea23d4dc24461d0270eb8e092a5d4d03577ce2b0fa04947a4145f"
+      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.2.0/mysql-explain-analyzer_Linux_armv6.tar.gz"
+      sha256 "72d4602d2a8aa1b37ef3bf67d2f9b5040d2eedfbc33bc364cde845703b3d4609"
 
       def install
         bin.install "mea"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.1.0/mysql-explain-analyzer_Linux_arm64.tar.gz"
-      sha256 "f779f390c3ccfb306ac5c8a76d40f8efd4134de89b1e63077b77bcdc909bac9b"
+      url "https://github.com/upamune/mysql-explain-analyzer/releases/download/v0.2.0/mysql-explain-analyzer_Linux_arm64.tar.gz"
+      sha256 "880571c08a97d3ec7908e4a3756e0494b385f63446ebd1066662fb3ca1738062"
 
       def install
         bin.install "mea"
