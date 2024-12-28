@@ -5,20 +5,20 @@
 class Typereplacer < Formula
   desc "typereplacer is a CLI tool for rewriting struct fields' types based on a config."
   homepage "https://github.com/upamune/typereplacer"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/typereplacer/releases/download/v0.1.0/typereplacer_Darwin_x86_64.tar.gz"
-      sha256 "5647bf867a95d45156ed9b73fd40721c9c808d70d3d923ea56ac259d06f3fbfc"
+      url "https://github.com/upamune/typereplacer/releases/download/v0.2.0/typereplacer_Darwin_x86_64.tar.gz"
+      sha256 "14125b0e1046d2a6bfe4e06d7d4bcc5d1ceecb14872d74f500d0ad98b96e1a3f"
 
       def install
         bin.install "typereplacer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/typereplacer/releases/download/v0.1.0/typereplacer_Darwin_arm64.tar.gz"
-      sha256 "9fcc81c740eacbf264cd10c63247d325e2705236c88e38dc3bd88c00aa4651cc"
+      url "https://github.com/upamune/typereplacer/releases/download/v0.2.0/typereplacer_Darwin_arm64.tar.gz"
+      sha256 "1ba669aa405afe6070f2ee183951b0144c33e04ad5d10feddb3b66620a0beaf5"
 
       def install
         bin.install "typereplacer"
@@ -29,8 +29,8 @@ class Typereplacer < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/typereplacer/releases/download/v0.1.0/typereplacer_Linux_x86_64.tar.gz"
-        sha256 "990dfdcadc5f0887491e85169a427a7cf718ed03e8cb46da1dbb3637efe6a651"
+        url "https://github.com/upamune/typereplacer/releases/download/v0.2.0/typereplacer_Linux_x86_64.tar.gz"
+        sha256 "d340adb4436f25a1a8efe4734abf5eed456bd0da9deb0ecb58dbaece08265b8c"
 
         def install
           bin.install "typereplacer"
@@ -39,8 +39,8 @@ class Typereplacer < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/typereplacer/releases/download/v0.1.0/typereplacer_Linux_arm64.tar.gz"
-        sha256 "9e40f9a29c5bf07634945ac6cdd57e55599f5ed2f131a5b982a3fdefc828f397"
+        url "https://github.com/upamune/typereplacer/releases/download/v0.2.0/typereplacer_Linux_arm64.tar.gz"
+        sha256 "7d18133d928f5ffccd124b2d8d4072805d312443d7604e954962c0548e1b6726"
 
         def install
           bin.install "typereplacer"
