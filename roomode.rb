@@ -5,20 +5,20 @@
 class Roomode < Formula
   desc "roomode is a CLI tool for managing custom modes for RooCode"
   homepage "https://github.com/upamune/roomode"
-  version "0.0.2"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/roomode/releases/download/v0.0.2/roomode_Darwin_amd64.tar.gz"
-      sha256 "3ab31e465793c89ea3f0f5354c20595850dde20675c6166c8f58a8053db0ae12"
+      url "https://github.com/upamune/roomode/releases/download/v0.0.4/roomode_Darwin_amd64.tar.gz"
+      sha256 "891272d15aec6361e8920abff0a2124f866b76fe811411bb22c495db1785b9fb"
 
       def install
         bin.install "roomode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/roomode/releases/download/v0.0.2/roomode_Darwin_arm64.tar.gz"
-      sha256 "9d64276d3233918633d6a6dac92ebde57a18026e7b480b480325251bb3f28934"
+      url "https://github.com/upamune/roomode/releases/download/v0.0.4/roomode_Darwin_arm64.tar.gz"
+      sha256 "6377456482ea0091a03ee402ffda73af446923adda72ffaf4923876a366098f6"
 
       def install
         bin.install "roomode"
@@ -29,8 +29,8 @@ class Roomode < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/roomode/releases/download/v0.0.2/roomode_Linux_amd64.tar.gz"
-        sha256 "201fe3c53f1b5b87dcad4d31738119607657e56deb9e681cf90c2df0a74d2418"
+        url "https://github.com/upamune/roomode/releases/download/v0.0.4/roomode_Linux_amd64.tar.gz"
+        sha256 "e9ec77715935468b1ea8da57276715a71b3a71c373729d5c76085868f8c90458"
 
         def install
           bin.install "roomode"
@@ -39,8 +39,8 @@ class Roomode < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/roomode/releases/download/v0.0.2/roomode_Linux_arm64.tar.gz"
-        sha256 "bab2eb4117c5d9ffbc34b11ffc2efdca305f6ebf53285d3c311eac7527f1fc81"
+        url "https://github.com/upamune/roomode/releases/download/v0.0.4/roomode_Linux_arm64.tar.gz"
+        sha256 "c8b36fc54978330e8cf0c4efd363b8baeb099b7ac1ebc17f4c05b383162627d4"
 
         def install
           bin.install "roomode"
