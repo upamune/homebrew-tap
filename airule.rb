@@ -5,20 +5,20 @@
 class Airule < Formula
   desc "airule is an interactive terminal-based tool for selectively copying rule files between directories."
   homepage "https://github.com/upamune/airule"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/airule/releases/download/v0.0.2/airule_Darwin_amd64.tar.gz"
-      sha256 "3c30568372f7de93eed26d980243c3dd4cde30364dc07835f8eff4dd37fa4f0f"
+      url "https://github.com/upamune/airule/releases/download/v0.0.3/airule_Darwin_amd64.tar.gz"
+      sha256 "76f9943636c5ea419e4a3657dbafad6b365c676406c2e6eabf1e0d23f40f90fb"
 
       def install
         bin.install "airule"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/airule/releases/download/v0.0.2/airule_Darwin_arm64.tar.gz"
-      sha256 "e4c182e697e7c7f61f1fa2e91b0a724e12f9f1cf9331abffe22d085d05783cc2"
+      url "https://github.com/upamune/airule/releases/download/v0.0.3/airule_Darwin_arm64.tar.gz"
+      sha256 "576c1e49d150df4eb2dee150b176a4d71b6a70c934b14a9475423beba023912a"
 
       def install
         bin.install "airule"
@@ -29,8 +29,8 @@ class Airule < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/airule/releases/download/v0.0.2/airule_Linux_amd64.tar.gz"
-        sha256 "2b1f7b1b6e18bc4af20e457e479e860d770a5b34bf813f8b8e0483074afa7115"
+        url "https://github.com/upamune/airule/releases/download/v0.0.3/airule_Linux_amd64.tar.gz"
+        sha256 "622b2de945ff9a1f170bf5e86ab5e9f65eef342352b4a60d212397b24ab77f99"
 
         def install
           bin.install "airule"
@@ -39,8 +39,8 @@ class Airule < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/airule/releases/download/v0.0.2/airule_Linux_arm64.tar.gz"
-        sha256 "1ab21dbef5ec4813f2f7a0bd63524a9358a4f7be2432148181dcaae3189b2757"
+        url "https://github.com/upamune/airule/releases/download/v0.0.3/airule_Linux_arm64.tar.gz"
+        sha256 "a69cc9c0f98a183b98486c201141d9a775d5723a02fcba1b38a2a7b23cb73959"
 
         def install
           bin.install "airule"
