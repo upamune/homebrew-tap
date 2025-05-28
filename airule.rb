@@ -5,20 +5,20 @@
 class Airule < Formula
   desc "airule is an interactive terminal-based tool for selectively copying rule files between directories."
   homepage "https://github.com/upamune/airule"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Darwin_amd64.tar.gz"
-      sha256 "41733c7c69298867aa69b78e8b0ed5889646a5aa998d8fd0a19dd23a78ae106f"
+      url "https://github.com/upamune/airule/releases/download/v0.0.6/airule_Darwin_amd64.tar.gz"
+      sha256 "57ce6517969667470fff8c0d688b7257162ad23aec5d4ad9a20b336892d36881"
 
       def install
         bin.install "airule"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Darwin_arm64.tar.gz"
-      sha256 "8943a2acf23ce594ef57204e4cc2b1aa9c16013811d85f1d0921a9417365bba9"
+      url "https://github.com/upamune/airule/releases/download/v0.0.6/airule_Darwin_arm64.tar.gz"
+      sha256 "0059d47062f907cc4c3bf941ba2484ef404957606260300ed98c141dd1a57a09"
 
       def install
         bin.install "airule"
@@ -28,15 +28,15 @@ class Airule < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Linux_amd64.tar.gz"
-      sha256 "e48377a1d035f5d39c15e344446b2ce99f1d12f032aab5a14f1d67d0de44a917"
+      url "https://github.com/upamune/airule/releases/download/v0.0.6/airule_Linux_amd64.tar.gz"
+      sha256 "c087cfaf060de2541b5a7299ac220d3fb709dae882f3fe10b79645ce24379cf2"
       def install
         bin.install "airule"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Linux_arm64.tar.gz"
-      sha256 "21e1580eb1c6ef5084556f29e52b5362b05f3fac1d93a6055bea21b47aec633a"
+      url "https://github.com/upamune/airule/releases/download/v0.0.6/airule_Linux_arm64.tar.gz"
+      sha256 "d3c4eea0e093fb243ca1befdd69395d18e15bf38a6fcf29a36258199d7fafcb7"
       def install
         bin.install "airule"
       end
