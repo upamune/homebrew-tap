@@ -5,20 +5,20 @@
 class Airule < Formula
   desc "airule is an interactive terminal-based tool for selectively copying rule files between directories."
   homepage "https://github.com/upamune/airule"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/upamune/airule/releases/download/v0.0.4/airule_Darwin_amd64.tar.gz"
-      sha256 "2346649cef6c17a50c753ca55db8498e4888dd405873ae728ff6f954b052c3fd"
+      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Darwin_amd64.tar.gz"
+      sha256 "41733c7c69298867aa69b78e8b0ed5889646a5aa998d8fd0a19dd23a78ae106f"
 
       def install
         bin.install "airule"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/airule/releases/download/v0.0.4/airule_Darwin_arm64.tar.gz"
-      sha256 "96ced301e160f0191160748d817ca4c2ba40e709fb0e88de758b2faf7d1c8d9a"
+      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Darwin_arm64.tar.gz"
+      sha256 "8943a2acf23ce594ef57204e4cc2b1aa9c16013811d85f1d0921a9417365bba9"
 
       def install
         bin.install "airule"
@@ -27,24 +27,18 @@ class Airule < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/airule/releases/download/v0.0.4/airule_Linux_amd64.tar.gz"
-        sha256 "2933ac09b788dc9fb1515caf42788c0fd058a2fa9aed9c344602cddee22242c1"
-
-        def install
-          bin.install "airule"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Linux_amd64.tar.gz"
+      sha256 "e48377a1d035f5d39c15e344446b2ce99f1d12f032aab5a14f1d67d0de44a917"
+      def install
+        bin.install "airule"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/upamune/airule/releases/download/v0.0.4/airule_Linux_arm64.tar.gz"
-        sha256 "96a7e508190226c608cb5b5aa3507288491bf84da0921c4efb72442e89d00b6b"
-
-        def install
-          bin.install "airule"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/upamune/airule/releases/download/v0.0.5/airule_Linux_arm64.tar.gz"
+      sha256 "21e1580eb1c6ef5084556f29e52b5362b05f3fac1d93a6055bea21b47aec633a"
+      def install
+        bin.install "airule"
       end
     end
   end
