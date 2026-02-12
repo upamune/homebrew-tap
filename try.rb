@@ -5,12 +5,12 @@
 class Try < Formula
   desc "Ephemeral workspace manager"
   homepage "https://github.com/upamune/try-go"
-  version "0.0.1"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/upamune/try-go/releases/download/v0.0.1/try_darwin_arm64.tar.gz"
-      sha256 "94989eb060fe517f6361751b1689f48f4b9ab636e4c24ccb028b345915a632a9"
+      url "https://github.com/upamune/try-go/releases/download/v0.0.3/try_darwin_arm64.tar.gz"
+      sha256 "74771198667dd855d6f4e79914d2d1c3dbab0234c9db331dcc184ec75ce003cd"
 
       def install
         bin.install "try"
@@ -20,8 +20,8 @@ class Try < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/upamune/try-go/releases/download/v0.0.1/try_linux_amd64.tar.gz"
-      sha256 "3f89afcd8216dbbbe586658edc6fbfee5709c39ef16f109109602154e6346f1a"
+      url "https://github.com/upamune/try-go/releases/download/v0.0.3/try_linux_amd64.tar.gz"
+      sha256 "c179c9ad35258dd9cd7fb7da9a68f7b81818e5c7c8c193d8bf8da5ddfff9c88f"
       def install
         bin.install "try"
       end
